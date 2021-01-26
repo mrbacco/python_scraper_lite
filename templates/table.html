@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table border="1">
+                        <tr>
+                            <th>date</th><td>24-Jan-2021 (20:25:13.926193)</td>
+                        </tr>
+                        <tr>
+                            <th>url</th><td>http://mrbacco.com</td>
+                        </tr>
+                        <tr>
+                            <th>response code</th><td>200</td>
+                        </tr>
+                        <tr>
+                            <th>title name</th><td>title</td>
+                        </tr>
+                        <tr>
+                            <th>title</th><td>&lt;title&gt;[ mrbacco ] – [ Just another human on the internet ]&lt;/title&gt;</td>
+                        </tr>
+                        <tr>
+                            <th>paragraphs</th><td>[&lt;p class=&quot;header__brand-description&quot;&gt;&lt;span&gt;[ Just another human on the internet ]&lt;/span&gt;&lt;/p&gt;, &lt;p class=&quot;has-text-align-center&quot; id=&quot;projects&quot;&gt;It is just another &lt;span class=&quot;has-inline-color has-main-text-color&quot;&gt;&lt;strong&gt;&lt;em&gt;anonymous technology fanatic&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt; here. So follow me or not, I will still be here! &lt;/p&gt;, &lt;p class=&quot;has-text-align-center&quot; id=&quot;projects&quot;&gt;In the meantime you can &lt;a href=&quot;https://mrbacco.com/about&quot;&gt;learm more about me&lt;/a&gt; and enjoy some news.&lt;/p&gt;]</td>
+                        </tr>
+                        <tr>
+                            <th>hypelinks</th><td>[&lt;a class=&quot;skip-link screen-reader-text&quot; href=&quot;#main&quot;&gt;Skip to the content&lt;/a&gt;, &lt;a aria-current=&quot;page&quot; class=&quot;custom-logo-link&quot; href=&quot;https://mrbacco.com/&quot; rel=&quot;home&quot;&gt;&lt;img alt=&quot;[ mrbacco ]&quot; class=&quot;custom-logo&quot; height=&quot;157&quot; sizes=&quot;(max-width: 314px) 100vw, 314px&quot; src=&quot;https://mrbacco.com/wp-content/uploads/2020/06/cropped-ensooo-2-3.png&quot; srcset=&quot;https://mrbacco.com/wp-content/uploads/2020/06/cropped-ensooo-2-3.png 314w, https://mrbacco.com/wp-content/uploads/2020/06/cropped-ensooo-2-3-300x150.png 300w&quot; width=&quot;314&quot;/&gt;&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/&quot; rel=&quot;home&quot;&gt;[ mrbacco ]&lt;/a&gt;, &lt;a aria-current=&quot;page&quot; href=&quot;https://mrbacco.com/&quot;&gt;hello&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/blog&quot;&gt;blog&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/projects&quot;&gt;projects&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/about&quot;&gt;about&lt;/a&gt;, &lt;a aria-current=&quot;page&quot; href=&quot;https://mrbacco.com/&quot;&gt;hello&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/blog&quot;&gt;blog&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/projects&quot;&gt;projects&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/about&quot;&gt;about&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/&quot;&gt;&lt;i class=&quot;fas fa-home&quot; title=&quot;Home&quot;&gt;&lt;/i&gt;&lt;/a&gt;, &lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fas fa-arrow-up&quot; title=&quot;Scroll to top&quot;&gt;&lt;/i&gt;&lt;/a&gt;, &lt;a aria-current=&quot;page&quot; href=&quot;https://mrbacco.com/&quot;&gt;hello&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/blog&quot;&gt;blog&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/projects&quot;&gt;projects&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/about&quot;&gt;about&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/about&quot;&gt;learm more about me&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/__mrbacco__&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fab fa-twitter&quot; title=&quot;&quot;&gt;&lt;/i&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/mrbacco&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fab fa-github&quot; title=&quot;&quot;&gt;&lt;/i&gt;&lt;/a&gt;, &lt;a href=&quot;https://linkedin.com/in/mrbacco/&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fab fa-linkedin-in&quot; title=&quot;&quot;&gt;&lt;/i&gt;&lt;/a&gt;, &lt;a href=&quot;mailto:mrbacco@outlook.com&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;fas fa-globe&quot; title=&quot;&quot;&gt;&lt;/i&gt;&lt;/a&gt;, &lt;a href=&quot;https://mrbacco.com/privacy-policy-2&quot;&gt;terms and conditions &lt;/a&gt;]</td>
+                        </tr>
+                    </table>
+
+
+
+
+                    <pre>
+                        <code>
+                            {{tasks}}
+                        </code>
+                    </pre>
+                    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+                        <script>
+                            $(function() {
+                           var people = [];
+                           $.getJSON('message.json', function(data) {
+                               $.each(data.person, function(i, f) {
+                                  var tblRow = "<tr>" + "<td>" + f.date + "</td>" +
+                                   "<td>" + f.url + "</td>" + "<td>" + f.responsecode + "</td>" + "<td>" + f.hyperlinks + "</td>" + "</tr>"
+                                   $(tblRow).appendTo("#userdata tbody");
+                             });
+                           });
+                        });
+                        </script>
+                    <div class="starter-template">
+                        <table id= "userdata" border="1">
+                            <thead>
+                                <th>Date</th>
+                                <th>URL</th>
+                                <th>response code</th>
+                                <th>hyperlinks</th>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <title>IAM User List</title>
+        <style type="text/css">
+            body{
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table class="table table-responsive table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>User Name</th>
+                        <th>Path</th>
+                        <th>Create Date</th>
+                        <th>Arn</th>
+                    </tr>
+                </thead>
+                <tbody id="iam_tbody">
+
+                </tbody>
+            </table>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $.ajax({
+                    method: "GET",
+                    url: "http://localhost/iam/iam.json",
+                }).done(function(response){
+                    user_list = response.Users;
+                    for(i = 0; i<user_list.length; i++){
+                        tr = "<tr>";
+                        tr += "<td>";
+                        tr += user_list[i]["UserId"];
+                        tr += "</td>";
+                        tr += "<td>";
+                        tr += user_list[i]["UserName"];
+                        tr += "</td>";
+                        tr += "<td>";
+                        tr += user_list[i]["Path"];
+                        tr += "</td>";
+                        tr += "<td>";
+                        tr += user_list[i]["CreateDate"];
+                        tr += "</td>";
+                        tr += "<td>";
+                        tr += user_list[i]["Arn"];
+                        tr += "</td>";
+                        tr += "<tr>";
+                        $("#iam_tbody").append(tr);
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block head %} {% endblock %}
+
+    <div class="container">
+        {% block body %}
+        <main role="main" class="starter-template">
+            <div class="starter-template">
+                <h1>web scraping app</h1>
+                <h2></h2></h3>
+                <p>Welcome: this application allows users to perform web scraping of website of their interest and get the results in the results page</p>
+                {% from "includes/_formhelpers.html" import render_field%}
+                <div class="starter-template">
+
+                        <form method ="POST", action ="">
+                          <div class="form-group">
+                            {{render_field(form.url, class = "form-control")}}
+                            <small id="emailHelp" class="form-text text-muted">Please use the format: HTTP://domain.com</small>
+                          </div>
+                          
+                          <button type="submit" class="btn btn-primary">Submit</button>
+                          <small id="emailHelp" class="form-text text-muted">You must be at least eighteen years of age to use the Services. By clicking "submit" and by using the Services, you agree to this Agreement and you warrant and represent that you are at least eighteen years of age. By clicking the Submit button you agree to indemnify and keep mrbacco.com indemnified against any actions, losses, damages, claims, liabilities, proceedings, penalties, demands, expenses, and costs (including reasonable legal expenses) howsoever incurred by us resulting from a breach by you of your obligations pursuant to these Terms in respect of Personal Data and web scraping data. You also agree to indemnify and hold mrbacco.com and its affiliates, directors, officers, employees, and agents harmless from and against any and all liabilities, expenses, charges, losses, damages or costs, including legal fees, incurred in connection with or arising from any third-party allegations, proceedings, claims, actions, disputes, or demands asserted against any of them howsoever incurred by us as a result of or relating to your Content, your use or mis-use or illegal use of the Services, or a breach by you of any of these Terms</small>
+                        </form>
+                    
+                </div>
+                    {% if error %}
+                    <p class="error">
+                    <strong> Message: {{ error }}</strong>
+                    {% endif %}
+                
+            </div>
+        </main>
+    </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"><\/script>')</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+    {% endblock %}

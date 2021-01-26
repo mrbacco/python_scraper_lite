@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> WEB SCRAPING APP </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+        $('#content').load("result.html");
+
+    });
+    </script>
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            font-family: 'Roboto', sans-serif;
+        }
+        .div-conatiner {
+            background-color: #eeeeee;
+            margin-bottom: 5px;
+            padding: 5px;
+        }
+
+        .div-conatiner p {
+            margin : 0px;
+        }
+        .starter-template {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            
+        }
+
+        .message {
+            text-align: center;
+            padding: 5px;
+            border: #ccc dotted 2px;
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+                font-family: 'Roboto', sans-serif;
+                
+            }
+        }
+        .alert {
+            position: relative;
+            padding: .75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: .25rem
+        }
+
+        .alert-heading {
+            color: inherit
+        }
+
+        .alert-link {
+            font-weight: 700
+        }
+
+        .alert-dismissible {
+            padding-right: 4rem
+        }
+
+            .alert-dismissible .close {
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding: .75rem 1.25rem;
+                color: inherit
+            }
+
+        .alert-success {
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb
+        }
+
+            .alert-success hr {
+                border-top-color: #b1dfbb
+            }
+
+            .alert-success .alert-link {
+                color: #0b2e13
+            }
+
+        .alert-info {
+            color: #0c5460;
+            background-color: #d1ecf1;
+            border-color: #bee5eb
+        }
+
+            .alert-info hr {
+                border-top-color: #abdde5
+            }
+
+            .alert-info .alert-link {
+                color: #062c33
+            }
+
+        .alert-warning {
+            color: #856404;
+            background-color: #fff3cd;
+            border-color: #ffeeba
+        }
+
+            .alert-warning hr {
+                border-top-color: #ffe8a1
+            }
+
+            .alert-warning .alert-link {
+                color: #533f03
+            }
+
+        .alert-danger {
+            color: #721c24;
+            background-color: #f8d7da;
+            border-color: #f5c6cb
+        }
+
+            .alert-danger hr {
+                border-top-color: #f1b0b7
+            }
+
+            .alert-danger .alert-link {
+                color: #491217
+            }
+
+        
+    </style>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="/lib/w3.js"></script>
+    <script src="http://www.w3schools.com/lib/w3data.js"></script>
+    <script type="text/javascript" src="include_html.js"></script>
+
+
+    {% block head %}{% endblock %}
+
+
+
+</head>
+
+<body>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/">home</a>
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard">results</a>
+          </li>
+
+          
+        </ul>
+
+      </div>
+    </nav>
+        <div class="starter-template">
+
+            {% include "includes/_messages.html" %}
+            {% block body %}
+            {% endblock %}
+
+        </div>
+ 
+   
+    <footer>
+    <div class="starter-template">
+        <style>
+        @media (max-width: 400px) {
+        #copyright {text-align: center;}
+        }
+        </style>
+        <p>Copyright &copy;2021 mrbacco.com</p>
+    </div>
+</footer>
+</body>
+
+</html>
