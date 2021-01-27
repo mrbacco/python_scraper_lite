@@ -1,5 +1,6 @@
 future
 Flask
+gunicorn
 setuptools
 requests
 WTForms
