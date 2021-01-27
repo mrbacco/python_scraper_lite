@@ -9,25 +9,14 @@
 ############## import START ##############
 
 from flask import Flask, render_template, url_for, session, request, redirect, logging, flash  # modules from flask for web server
-import cgi, cgitb
-import pymongo # driver for mongdb connectivity
-import pandas as pd
-import scrapy as scrapy
 from wtforms import Form, StringField, TextAreaField, PasswordField, validators # FOR THE WEBFORMS
-#from flask_wtf import URLField
-from passlib.hash import sha512_crypt # password hashing
 import logging
-from functools import wraps
-from flask_mail import Mail, Message
 from datetime import datetime
 from bs4 import BeautifulSoup
 import requests
-import pprint
 import json
 from json2html import *
-from pathlib import Path
 import shutil
-import os.path
 import codecs
 
 ############## import END ##############
